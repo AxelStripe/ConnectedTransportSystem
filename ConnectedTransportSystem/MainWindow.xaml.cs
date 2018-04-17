@@ -24,5 +24,12 @@ namespace ConnectedTransportSystem
         {
             InitializeComponent();
         }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            signUp.Show();
+            this.Close();
+        }
     }
 }

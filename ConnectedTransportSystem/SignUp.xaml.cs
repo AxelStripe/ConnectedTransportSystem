@@ -23,5 +23,13 @@ namespace ConnectedTransportSystem
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            //go back tot he main window
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
     }
 }

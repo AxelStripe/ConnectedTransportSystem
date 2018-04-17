@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConnectedTransportSystem"
         mc:Ignorable="d"
-        Title="SignUp" Height="350" Width="525">
+        Title="SignUp" Height="400" Width="585">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.25*"/>
@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
         <!--Title and back button-->
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="60" Margin="0,5,0,0" x:Name="btnBack" Grid.Row="0"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="60" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
         <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
 
         <!--Description for Sign up page-->
@@ -37,27 +37,27 @@
                 <ColumnDefinition Width="1.25*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-
+           
             <Label Content="Username" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="5" x:Name="txtUsername"/>
+            <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtUsername"/>
 
             <Label Content="Password" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="5" x:Name="txtPassword"/>
+            <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPassword"/>
 
             <Label Content="First Name" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="5" x:Name="txtFirstName"/>
+            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtFirstName"/>
 
             <Label Content="Last Name" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="5" x:Name="txtLastName"/>
+            <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtLastName"/>
 
             <Label Content="Address" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="5" x:Name="txtAddress"/>
+            <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtAddress"/>
 
             <Label Content="Postcode" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="5" x:Name="txtPostcode"/>
+            <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPostcode"/>
 
             <Label Content="E-Mail" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="5" x:Name="txtEmail"/>
+            <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtEmail"/>
         </Grid>
 
         <!--Create account button-->

@@ -5,40 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConnectedTransportSystem"
         mc:Ignorable="d"
-        Title="Login" Height="350" Width="525">
+        Title="Login" Height="400" Width="585">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="0.185*"/>
-            <RowDefinition Height="0.185*"/>
-            <RowDefinition Height="0.15*"/>
-            <RowDefinition/>
+            <RowDefinition Height="0.66*"/>
+            <RowDefinition Height="0.75*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         
         <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
         
         <!--Username box-->
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.25*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-            <Label Content="Username" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="5" x:Name="txtUsername"/>
-        </Grid>
+        <StackPanel Grid.Row="1">
 
-        <!--Password box-->
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.25*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-            <Label Content="Password" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="5" x:Name="txtPassword"/>
-        </Grid>
-        
-        <!--Forgot Login details link-->
-        <Label Grid.Row="3" Content="Forgot Username/Password?" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,142,0"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.25*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Username" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtUsername"/>
+            </Grid>
+
+            <!--Password box-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.25*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Password" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPassword"/>
+            </Grid>
+
+            <!--Forgot Login details link-->
+            <Label Content="Forgot Username/Password?" VerticalAlignment="Center" HorizontalContentAlignment="Right" Padding="0,0,100,0"/>
+
+        </StackPanel>
 
         <!--Login and Signup buttons-->
         <Grid Grid.Row="4" VerticalAlignment="Top" Margin="0,5,0,0">
@@ -47,8 +49,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25" Content="Login" x:Name="btnLogin"/>
-            <Button Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25" Content="Sign-up" x:Name="btnSignUp"/>
+            <Button Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Content="Login" x:Name="btnLogin"/>
+            <Button Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Content="Sign-up" x:Name="btnSignUp" Click="btnSignUp_Click"/>
         </Grid>
     </Grid>
 </Window>
