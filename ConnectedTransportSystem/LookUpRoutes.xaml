@@ -1,43 +1,28 @@
-﻿<Window x:Class="ConnectedTransportSystem.MainMenu"
+﻿<Window x:Class="ConnectedTransportSystem.LookUpRoutes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConnectedTransportSystem"
         mc:Ignorable="d"
-        Title="MainMenu" Height="400" Width="585">
+        Title="LookUpRoutes" Height="400" Width="585">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.25*"/>
             <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
-        
+
         <!--Title, back button and username menu-->
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="60" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
         <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
+
         <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0">
             <MenuItem Header="[Username]" x:Name="mnuUser">
                 <MenuItem Header="Log Out" x:Name="mnuLogout" Click="mnuLogout_Click"/>
             </MenuItem>
         </Menu>
 
-        <!--Menu Buttons-->
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <StackPanel Grid.Column="0" VerticalAlignment="Center">
-                <!--Insert image relating to plan journey here-->
-                <Button Content="Plan Journey" Margin="12" x:Name="btnPlan" Click="btnPlan_Click"/>
-            </StackPanel>
-
-            <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                <!--Insert image relating to RTI here-->
-                <Button Content="Real Time Information" Margin="12"/>
-            </StackPanel>
-
-        </Grid>
-        
+        <ListBox Grid.Row="1"/>
     </Grid>
 </Window>

@@ -15,32 +15,31 @@ using System.Windows.Shapes;
 namespace ConnectedTransportSystem
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for LookUpRoutes.xaml
     /// </summary>
-    public partial class MainMenu : Window
+    public partial class LookUpRoutes : Window
     {
         private string _username;
 
-        public MainMenu()
+        public LookUpRoutes()
         {
             InitializeComponent();
         }
 
-        public MainMenu(string username)
+        public LookUpRoutes(string username, string begin, string startTime, string end, string endTime)
         {
             InitializeComponent();
 
-            //display username on the menu header
-            _username = username;       
+            _username = username;
+
             mnuUser.Header = _username;
         }
 
-        private void btnPlan_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            //use constructors to transfer data like username and selected times and etc.
-            JourneyPlanner planner = new JourneyPlanner(_username);
-            planner.Show();
-            this.Close();
+            JourneyPlanner journeyPlanner = new JourneyPlanner(_username);
+            journeyPlanner.Show();
+            this.Hide();
         }
 
         private void mnuLogout_Click(object sender, RoutedEventArgs e)

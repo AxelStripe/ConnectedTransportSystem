@@ -13,9 +13,15 @@
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
-        <!--Title and back button-->
-        <Button Content="Back" HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="60" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
+        <!--Title, back button and username menu-->
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="60" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
         <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
+
+        <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0">
+            <MenuItem Header="[Username]" x:Name="mnuUser">
+                <MenuItem Header="Log Out" x:Name="mnuLogout" Click="mnuLogout_Click"/>
+            </MenuItem>
+        </Menu>
 
         <Grid Grid.Row="1" VerticalAlignment="Center" Margin="10,0,10,0">
             <Grid.ColumnDefinitions>
@@ -31,8 +37,8 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1">
-                <ComboBox x:Name="cboStartPoint" Margin="5"/>
-                <ComboBox x:Name="cboDestination" Margin="5"/>
+                <ComboBox x:Name="cboStartPoint" Margin="5" SelectionChanged="cboStartPoint_SelectionChanged"/>
+                <ComboBox x:Name="cboDestination" Margin="5" SelectionChanged="cboDestination_SelectionChanged"/>
             </StackPanel>
 
             <StackPanel Grid.Column="2">
@@ -41,12 +47,12 @@
             </StackPanel>
 
             <StackPanel Grid.Column="3">
-                <TextBox x:Name="txtStartTime" Margin="5"/>
-                <TextBox x:Name="txtArriveTime" Margin="5,10,5,5"/>
+                <TextBox x:Name="txtStartTime" Margin="5" TextChanged="txtStartTime_TextChanged"/>
+                <TextBox x:Name="txtArriveTime" Margin="5,10,5,5" TextChanged="txtArriveTime_TextChanged"/>
             </StackPanel>
         </Grid>
 
-        <Button Grid.Row="2" Content="Search" x:Name="btnSearch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="189,30" Width="199"/>
+        <Button Grid.Row="2" Content="Search" x:Name="btnSearch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="189,30" Width="199" Click="btnSearch_Click"/>
 
     </Grid>
 </Window>

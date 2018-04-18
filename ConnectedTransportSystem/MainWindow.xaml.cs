@@ -23,6 +23,7 @@ namespace ConnectedTransportSystem
         public MainWindow()
         {
             InitializeComponent();
+            EnableLogIn();
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
@@ -30,6 +31,32 @@ namespace ConnectedTransportSystem
             SignUp signUp = new SignUp();
             signUp.Show();
             this.Close();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string username = txtUsername.Text;
+            MainMenu mainMenu = new MainMenu(username);
+            mainMenu.Show();
+            this.Close();
+        }
+
+        private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            EnableLogIn();
+        }
+
+        private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            EnableLogIn();
+        }
+
+        void EnableLogIn()
+        {
+            if (txtUsername.Text.Length > 0 && txtPassword.Text.Length > 0)
+                btnLogin.IsEnabled = true;
+            else
+                btnLogin.IsEnabled = false;
         }
     }
 }

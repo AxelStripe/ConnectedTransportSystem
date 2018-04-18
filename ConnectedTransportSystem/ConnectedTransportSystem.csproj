@@ -57,6 +57,9 @@
     <Compile Include="JourneyPlanner.xaml.cs">
       <DependentUpon>JourneyPlanner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LookUpRoutes.xaml.cs">
+      <DependentUpon>LookUpRoutes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
@@ -64,6 +67,10 @@
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
     <Page Include="JourneyPlanner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LookUpRoutes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
