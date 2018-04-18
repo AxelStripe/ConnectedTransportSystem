@@ -31,5 +31,19 @@ namespace ConnectedTransportSystem
             planner.Show();
             this.Close();
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+            this.Close();
+        }
+
+        private void mnuLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

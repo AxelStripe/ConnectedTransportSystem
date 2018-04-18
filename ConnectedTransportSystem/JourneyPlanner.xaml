@@ -14,10 +14,10 @@
         </Grid.RowDefinitions>
 
         <!--Title and back button-->
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="60" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
+        <Button Content="Back" HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="60" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
         <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
 
-        <Grid Grid.Row="1" VerticalAlignment="Center">
+        <Grid Grid.Row="1" VerticalAlignment="Center" Margin="10,0,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -27,7 +27,7 @@
 
             <StackPanel Grid.Column="0">
                 <Label Content="Starting Point" HorizontalAlignment="Right"/>
-                <Label Content="Destination" HorizontalAlignment="Right"/>
+                <Label Content="Destination" HorizontalAlignment="Right" Margin="0,7,0,0"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
@@ -37,12 +37,12 @@
 
             <StackPanel Grid.Column="2">
                 <Label Content="Departure Time" HorizontalAlignment="Right"/>
-                <Label Content="Arrival Time" HorizontalAlignment="Right"/>
+                <Label Content="Arrival Time" HorizontalAlignment="Right" Margin="0,7,0,0"/>
             </StackPanel>
 
             <StackPanel Grid.Column="3">
                 <TextBox x:Name="txtStartTime" Margin="5"/>
-                <TextBox x:Name="txtArriveTime" Margin="5"/>
+                <TextBox x:Name="txtArriveTime" Margin="5,10,5,5"/>
             </StackPanel>
         </Grid>
 
