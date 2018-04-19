@@ -15,7 +15,7 @@
         <!--Title, back button and username menu-->
         <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
         <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0">
-            <MenuItem Header="[Username]" x:Name="mnuUser">
+            <MenuItem Header="[Username]" x:Name="mnuUser" FontSize="21">
                 <MenuItem Header="Log Out" x:Name="mnuLogout" Click="mnuLogout_Click"/>
             </MenuItem>
         </Menu>

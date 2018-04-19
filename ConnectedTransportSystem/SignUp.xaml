@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
         <!--Title and back button-->
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="60" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" FontSize="18" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
         <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
 
         <!--Description for Sign up page-->
@@ -39,25 +39,25 @@
             </Grid.ColumnDefinitions>
            
             <Label Content="Username" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtUsername"/>
+            <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtUsername" TextChanged="txtUsername_TextChanged"/>
 
             <Label Content="Password" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPassword"/>
+            <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPassword" TextChanged="txtPassword_TextChanged"/>
 
             <Label Content="First Name" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtFirstName"/>
+            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtFirstName" TextChanged="txtFirstName_TextChanged"/>
 
             <Label Content="Last Name" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtLastName"/>
+            <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtLastName" TextChanged="txtLastName_TextChanged"/>
 
             <Label Content="Address" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtAddress"/>
+            <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtAddress" TextChanged="txtAddress_TextChanged"/>
 
             <Label Content="Postcode" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPostcode"/>
+            <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPostcode" TextChanged="txtPostcode_TextChanged"/>
 
             <Label Content="E-Mail" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtEmail"/>
+            <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtEmail" TextChanged="txtEmail_TextChanged"/>
         </Grid>
 
         <!--Create account button-->

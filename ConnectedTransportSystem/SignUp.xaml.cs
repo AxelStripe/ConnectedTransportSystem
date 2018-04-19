@@ -22,14 +22,66 @@ namespace ConnectedTransportSystem
         public SignUp()
         {
             InitializeComponent();
+
+            ChangeControlColour(txtAddress);
+            ChangeControlColour(txtEmail);
+            ChangeControlColour(txtFirstName);
+            ChangeControlColour(txtLastName);
+            ChangeControlColour(txtPassword);
+            ChangeControlColour(txtPostcode);
+            ChangeControlColour(txtUsername);
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            //go back tot he main window
+            //go back to the main window
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();
+        }
+
+        void ChangeControlColour(TextBox txt)
+        {
+            if (txt.Text.Length > 0)
+                txt.Background = Brushes.White;
+            else
+                txt.Background = Brushes.Red;
+
+        }
+
+        private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChangeControlColour(txtUsername);
+        }
+
+        private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChangeControlColour(txtPassword);
+        }
+
+        private void txtFirstName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChangeControlColour(txtFirstName);
+        }
+
+        private void txtLastName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChangeControlColour(txtLastName);
+        }
+
+        private void txtAddress_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChangeControlColour(txtAddress);
+        }
+
+        private void txtPostcode_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChangeControlColour(txtPostcode);
+        }
+
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ChangeControlColour(txtEmail);
         }
     }
 }

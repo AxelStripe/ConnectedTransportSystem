@@ -14,11 +14,11 @@
         </Grid.RowDefinitions>
 
         <!--Title, back button and username menu-->
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="60" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" FontSize="18" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
         <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
 
         <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0">
-            <MenuItem Header="[Username]" x:Name="mnuUser">
+            <MenuItem Header="[Username]" x:Name="mnuUser" FontSize="21">
                 <MenuItem Header="Log Out" x:Name="mnuLogout" Click="mnuLogout_Click"/>
             </MenuItem>
         </Menu>
@@ -37,8 +37,12 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1">
-                <ComboBox x:Name="cboStartPoint" Margin="5" SelectionChanged="cboStartPoint_SelectionChanged"/>
-                <ComboBox x:Name="cboDestination" Margin="5" SelectionChanged="cboDestination_SelectionChanged"/>
+                <ComboBox x:Name="cboStartPoint" Margin="5" SelectionChanged="cboStartPoint_SelectionChanged" IsReadOnly="True">
+                    <ComboBox.BorderBrush>
+                        <ImageBrush/>
+                    </ComboBox.BorderBrush>
+                </ComboBox>
+                <ComboBox x:Name="cboDestination" Margin="5" SelectionChanged="cboDestination_SelectionChanged" IsReadOnly="True"/>
             </StackPanel>
 
             <StackPanel Grid.Column="2">

@@ -21,11 +21,6 @@ namespace ConnectedTransportSystem
     {
         private string _username;
 
-        public MainMenu()
-        {
-            InitializeComponent();
-        }
-
         public MainMenu(string username)
         {
             InitializeComponent();
@@ -33,6 +28,20 @@ namespace ConnectedTransportSystem
             //display username on the menu header
             _username = username;       
             mnuUser.Header = _username;
+            SetMenuIcon();
+        }
+
+        void SetMenuIcon()
+        {
+            mnuUser.Icon = new System.Windows.Controls.Image
+            {
+                Source = new BitmapImage(new Uri("Images/Users-icon.png", UriKind.Relative))
+            };
+
+            mnuLogout.Icon = new System.Windows.Controls.Image
+            {
+                Source = new BitmapImage(new Uri("Images/log-out.png", UriKind.Relative))
+            };
         }
 
         private void btnPlan_Click(object sender, RoutedEventArgs e)

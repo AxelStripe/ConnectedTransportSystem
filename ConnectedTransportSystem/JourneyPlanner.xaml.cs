@@ -22,14 +22,6 @@ namespace ConnectedTransportSystem
         private string _username;
         private List<string> stations;
 
-        public JourneyPlanner()
-        {
-            InitializeComponent();
-            EnableSearch();
-            InitList();
-
-        }
-
         public JourneyPlanner(string username)
         {
             InitializeComponent();
@@ -38,11 +30,20 @@ namespace ConnectedTransportSystem
             _username = username;
             mnuUser.Header = _username;
 
+            //set control colours
+            //ChangeControlColour(cboDestination);
+            //ChangeControlColour(cboStartPoint);
+            ChangeControlColour(txtArriveTime);
+            ChangeControlColour(txtStartTime);
+
             //Disable Search Button
             EnableSearch();
 
             //init stations list
             InitList();
+
+            //Set user menu icon
+            SetMenuIcon();
 
         }
 
@@ -63,6 +64,19 @@ namespace ConnectedTransportSystem
             }
         }
 
+        void SetMenuIcon()
+        {
+            mnuUser.Icon = new System.Windows.Controls.Image
+            {
+                Source = new BitmapImage(new Uri("Images/Users-icon.png", UriKind.Relative))
+            };
+
+            mnuLogout.Icon = new System.Windows.Controls.Image
+            {
+                Source = new BitmapImage(new Uri("Images/log-out.png", UriKind.Relative))
+            };
+        }
+
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             //use constructors to transfer data like username and selected times and etc.
@@ -80,26 +94,56 @@ namespace ConnectedTransportSystem
 
         private void txtStartTime_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //set control colour
+            ChangeControlColour(txtStartTime);
+
             //Enable Search button if text is in the field
             EnableSearch();
         }
 
         private void txtArriveTime_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //set control colour
+            ChangeControlColour(txtArriveTime);
+
             //Enable Search button if text is in the field
             EnableSearch();
         }
 
         private void cboStartPoint_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //set control colour
+            //ChangeControlColour(cboStartPoint);
+
             //Enable Search button if text is in the field
             EnableSearch();
         }
 
         private void cboDestination_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //set control colour
+            //ChangeControlColour(cboDestination);
+
             //Enable Search button if text is in the field
             EnableSearch();
+        }
+
+        //void ChangeControlColour(ComboBox cbo)
+        //{
+        //    if (cbo.SelectedIndex >= 0)
+        //        cbo.BorderBrush = Brushes.Gray;
+        //    else
+        //        cbo.BorderBrush = Brushes.Red;
+                
+        //}
+
+        void ChangeControlColour(TextBox txt)
+        {
+            if (txt.Text.Length > 0)
+                txt.Background = Brushes.White;
+            else
+                txt.Background = Brushes.Red;
+
         }
 
         void EnableSearch()

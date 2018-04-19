@@ -20,11 +20,7 @@ namespace ConnectedTransportSystem
     public partial class LookUpRoutes : Window
     {
         private string _username;
-
-        public LookUpRoutes()
-        {
-            InitializeComponent();
-        }
+        private List<string> routes;
 
         public LookUpRoutes(string username, string begin, string startTime, string end, string endTime)
         {
@@ -33,6 +29,35 @@ namespace ConnectedTransportSystem
             _username = username;
 
             mnuUser.Header = _username;
+
+            SetMenuIcon();
+
+            LoadRoutes(begin, startTime, end, endTime);
+        }
+
+        void SetMenuIcon()
+        {
+            mnuUser.Icon = new System.Windows.Controls.Image
+            {
+                Source = new BitmapImage(new Uri("Images/Users-icon.png", UriKind.Relative))
+            };
+
+            mnuLogout.Icon = new System.Windows.Controls.Image
+            {
+                Source = new BitmapImage(new Uri("Images/log-out.png", UriKind.Relative))
+            };
+        }
+
+        void LoadRoutes(string begin, string startTime, string end, string endTime)
+        {
+            routes = new List<string>();
+
+            routes.Add("Start: " + begin + " " + startTime + " Destination: " + end + " " + endTime);
+
+            foreach(string r in routes)
+            {
+                lstRoutes.Items.Add(r);
+            }
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
