@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConnectedTransportSystem"
         mc:Ignorable="d"
-        Title="Login" Height="400" Width="585">
+        Title="Login" Height="400" Width="585" Background="RoyalBlue">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.66*"/>
             <RowDefinition Height="0.75*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        
-        <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
-        
+
+        <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0" FontWeight="Bold"/>
+
         <!--Username box-->
         <StackPanel Grid.Row="1">
 
@@ -23,8 +23,8 @@
                     <ColumnDefinition Width="1.25*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <Label Content="Username" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                <TextBox Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtUsername" TextChanged="txtUsername_TextChanged"/>
+                <Label Content="Username" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtUsername" TextChanged="txtUsername_TextChanged" Background="Transparent" BorderBrush="Black"/>
             </Grid>
 
             <!--Password box-->
@@ -33,12 +33,12 @@
                     <ColumnDefinition Width="1.25*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <Label Content="Password" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                <TextBox Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPassword" TextChanged="txtPassword_TextChanged"/>
+                <Label Content="Password" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPassword" TextChanged="txtPassword_TextChanged" Background="Transparent" BorderBrush="Black"/>
             </Grid>
 
             <!--Forgot Login details link-->
-            <Label Content="Forgot Username/Password?" VerticalAlignment="Center" HorizontalContentAlignment="Right" Padding="0,0,100,0"/>
+            <Label Content="Forgot Username/Password?" VerticalAlignment="Center" HorizontalContentAlignment="Right" Padding="0,0,100,0" FontStyle="Italic"/>
 
         </StackPanel>
 
@@ -49,8 +49,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Content="Login" x:Name="btnLogin" Click="btnLogin_Click"/>
-            <Button Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Content="Sign-up" x:Name="btnSignUp" Click="btnSignUp_Click"/>
+            <Button Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Content="Login" x:Name="btnLogin" Click="btnLogin_Click" Background="Transparent" BorderBrush="Black" FontWeight="UltraBold" FontSize="16px" BorderThickness="2"/>
+            <Button Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Content="Sign-up" x:Name="btnSignUp" Click="btnSignUp_Click" Background="Transparent" BorderBrush="Black" FontWeight="UltraBold" FontSize="16px" BorderThickness="2"/>
         </Grid>
     </Grid>
 </Window>

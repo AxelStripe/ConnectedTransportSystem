@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConnectedTransportSystem"
         mc:Ignorable="d"
-        Title="MainMenu" Height="400" Width="585">
+        Title="MainMenu" Height="400" Width="585" Background="RoyalBlue">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.25*"/>
@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         
         <!--Title, back button and username menu-->
-        <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
+        <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0" FontWeight="Bold"/>
         <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0">
             <MenuItem Header="[Username]" x:Name="mnuUser" FontSize="21">
                 <MenuItem Header="Log Out" x:Name="mnuLogout" Click="mnuLogout_Click"/>
@@ -29,12 +29,12 @@
 
             <StackPanel Grid.Column="0" VerticalAlignment="Center">
                 <!--Insert image relating to plan journey here-->
-                <Button Content="Plan Journey" Margin="12" x:Name="btnPlan" Click="btnPlan_Click"/>
+                <Button Content="Plan Journey" Margin="12" x:Name="btnPlan" Click="btnPlan_Click" Background="Transparent" BorderBrush="Black" FontWeight="UltraBold" BorderThickness="2" Height="69"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1" VerticalAlignment="Center">
                 <!--Insert image relating to RTI here-->
-                <Button Content="Real Time Information" Margin="12"/>
+                <Button Content="Real Time Information" Margin="12" Background="Transparent" BorderBrush="Black" FontWeight="UltraBold" BorderThickness="2" Height="69"/>
             </StackPanel>
 
         </Grid>

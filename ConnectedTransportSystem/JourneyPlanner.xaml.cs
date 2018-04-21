@@ -140,7 +140,7 @@ namespace ConnectedTransportSystem
         void ChangeControlColour(TextBox txt)
         {
             if (txt.Text.Length > 0)
-                txt.Background = Brushes.White;
+                txt.Background = Brushes.Transparent;
             else
                 txt.Background = Brushes.Red;
 

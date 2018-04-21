@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConnectedTransportSystem"
         mc:Ignorable="d"
-        Title="SignUp" Height="400" Width="585">
+        Title="SignUp" Height="400" Width="585" Background="RoyalBlue">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.25*"/>
@@ -15,11 +15,11 @@
         </Grid.RowDefinitions>
 
         <!--Title and back button-->
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" FontSize="18" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
-        <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" FontSize="18" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click" Background="Transparent" BorderBrush="Black" BorderThickness="2" FontWeight="DemiBold"/>
+        <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0" FontWeight="Bold"/>
 
         <!--Description for Sign up page-->
-        <Label Content="Enter details to Sign up for a new Connect Transport Account" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Label Content="Enter details to Sign up for a new Connect Transport Account" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold"/>
 
         <!--Sign up form-->
         <Grid Grid.Row="2">
@@ -38,29 +38,29 @@
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
            
-            <Label Content="Username" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtUsername" TextChanged="txtUsername_TextChanged"/>
+            <Label Content="Username" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtUsername" TextChanged="txtUsername_TextChanged" Background="Transparent" BorderBrush="Black"/>
 
-            <Label Content="Password" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPassword" TextChanged="txtPassword_TextChanged"/>
+            <Label Content="Password" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPassword" TextChanged="txtPassword_TextChanged" Background="Transparent" BorderBrush="Black"/>
 
-            <Label Content="First Name" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtFirstName" TextChanged="txtFirstName_TextChanged"/>
+            <Label Content="First Name" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtFirstName" TextChanged="txtFirstName_TextChanged" Background="Transparent" BorderBrush="Black"/>
 
-            <Label Content="Last Name" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtLastName" TextChanged="txtLastName_TextChanged"/>
+            <Label Content="Last Name" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtLastName" TextChanged="txtLastName_TextChanged" Background="Transparent" BorderBrush="Black"/>
 
-            <Label Content="Address" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtAddress" TextChanged="txtAddress_TextChanged"/>
+            <Label Content="Address" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtAddress" TextChanged="txtAddress_TextChanged" Background="Transparent" BorderBrush="Black"/>
 
-            <Label Content="Postcode" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPostcode" TextChanged="txtPostcode_TextChanged"/>
+            <Label Content="Postcode" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtPostcode" TextChanged="txtPostcode_TextChanged" Background="Transparent" BorderBrush="Black"/>
 
-            <Label Content="E-Mail" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtEmail" TextChanged="txtEmail_TextChanged"/>
+            <Label Content="E-Mail" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="5" x:Name="txtEmail" TextChanged="txtEmail_TextChanged" Background="Transparent" BorderBrush="Black"/>
         </Grid>
 
         <!--Create account button-->
-        <Button Content="Sign Up" Grid.Row="3" x:Name="btnSignUp" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="205,10,141,10" Width="171" Height="29"/>
+        <Button Content="Sign Up" Grid.Row="3" x:Name="btnSignUp" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="205,10,141,10" Width="171" Height="29" Background="Transparent" BorderBrush="Black" FontWeight="UltraBold" BorderThickness="2"/>
     </Grid>
 </Window>

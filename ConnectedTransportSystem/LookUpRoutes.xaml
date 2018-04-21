@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConnectedTransportSystem"
         mc:Ignorable="d"
-        Title="LookUpRoutes" Height="400" Width="585">
+        Title="LookUpRoutes" Height="400" Width="585" Background="RoyalBlue">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.25*"/>
@@ -14,8 +14,8 @@
         </Grid.RowDefinitions>
 
         <!--Title, back button and username menu-->
-        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" FontSize="18" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click"/>
-        <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" FontSize="18" x:Name="btnBack" Grid.Row="0" Click="btnBack_Click" Background="Transparent" BorderBrush="Black" BorderThickness="2" FontWeight="DemiBold"/>
+        <Label Content="Connect Transport" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Grid.Row="0" FontWeight="Bold"/>
 
         <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0">
             <MenuItem Header="[Username]" x:Name="mnuUser" FontSize="21">
@@ -23,6 +23,6 @@
             </MenuItem>
         </Menu>
 
-        <ListBox Grid.Row="1" x:Name="lstRoutes"/>
+        <ListBox Grid.Row="1" x:Name="lstRoutes" Background="Transparent" BorderBrush="Black" FontSize="16" FontWeight="DemiBold"/>
     </Grid>
 </Window>
