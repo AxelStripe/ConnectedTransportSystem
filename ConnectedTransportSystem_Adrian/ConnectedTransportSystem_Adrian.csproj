@@ -54,6 +54,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TransportData.cs" />
+    <Compile Include="TransportUser.cs" />
     <Page Include="cashPaym.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

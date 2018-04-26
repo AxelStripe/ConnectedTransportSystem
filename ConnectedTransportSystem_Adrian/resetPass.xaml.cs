@@ -18,7 +18,7 @@ namespace ConnectedTransportSystem_Adrian
     /// <summary>
     /// Interaction logic for resetPass.xaml
     /// </summary>
-    public partial class resetPass : Page
+    public partial class resetPass : Window
     {
         public resetPass()
         {

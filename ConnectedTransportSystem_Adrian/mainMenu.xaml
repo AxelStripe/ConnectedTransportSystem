@@ -1,12 +1,11 @@
-﻿<Page x:Class="ConnectedTransportSystem_Adrian.mainMenu"
+﻿<Window x:Class="ConnectedTransportSystem_Adrian.mainMenu"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ConnectedTransportSystem_Adrian"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="mainMenu">
+      mc:Ignorable="d"
+      Title="mainMenu" Height="450" Width="800">
 
     <Grid>
         <Grid.Background>
@@ -33,6 +32,9 @@
                 <ImageBrush ImageSource="images\back.png"/>
             </Button.Background>
         </Button>
+        <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Width="150"  Height="75" Foreground="Blue">
+            <MenuItem x:Name="mnuUser" Header="Username" Icon="images/Users-icon.png" Width="150" Height="75" FontWeight="DemiBold" FontSize="14px"></MenuItem>
+        </Menu>
 
     </Grid>
-</Page>
+</Window>

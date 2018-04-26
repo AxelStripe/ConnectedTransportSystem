@@ -18,11 +18,15 @@ namespace ConnectedTransportSystem_Adrian
     /// <summary>
     /// Interaction logic for mainMenu.xaml
     /// </summary>
-    public partial class mainMenu : Page
+    public partial class mainMenu : Window
     {
-        public mainMenu()
+        private TransportData _data;
+
+        public mainMenu(TransportData data)
         {
             InitializeComponent();
+            _data = data;
+            mnuUser.Header = _data.GetLoggedInUser().GetUsername();
         }
     }
 }
