@@ -1,0 +1,50 @@
+﻿<Page x:Class="ConnectedTransportSystem_Adrian.payDetails"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ConnectedTransportSystem_Adrian"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="payDetails">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="images\background.png"/>
+        </Grid.Background>
+        <Grid HorizontalAlignment="Left" Height="61" Margin="75,10,0,0" VerticalAlignment="Top" Width="649">
+            <Label x:Name="pageTitle" Content="card payment" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Top" Width="629" Height="51" Foreground="#FFFDF9F9" FontSize="36" FontFamily="Perpetua Titling MT"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="199" Margin="10,114,0,0" VerticalAlignment="Top" Width="774">
+            <Label Content="Full Name:" HorizontalAlignment="Left" Margin="159,0,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFFCFBFB"/>
+            <Label Content="Card Type:" HorizontalAlignment="Left" Margin="160,37,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFFCFBFB"/>
+            <Label Content="Card No:" HorizontalAlignment="Left" Margin="160,70,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFFCFBFB"/>
+            <Label Content="Expiry Date:" HorizontalAlignment="Left" Margin="160,110,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFFCFBFB"/>
+            <Label Content="CSV:" HorizontalAlignment="Left" Margin="160,148,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFFCFBFB"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="270,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" BorderBrush="#FFFBFBFC" Background="{x:Null}"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="270,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" TextChanged="TextBox_TextChanged" BorderBrush="#FFFBFBFC" Background="{x:Null}"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="270,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" BorderBrush="#FFFBFBFC" Background="{x:Null}"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="270,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" TextChanged="TextBox_TextChanged_1" BorderBrush="#FFFBFBFC" Background="{x:Null}"/>
+            <ComboBox HorizontalAlignment="Left" Margin="270,39,0,0" VerticalAlignment="Top" Width="264" BorderBrush="#FFF7F2F2" Background="{x:Null}">
+                <ComboBoxItem Content="Visa Credit - Fee £0:00" HorizontalAlignment="Left" Width="264"/>
+                <ComboBoxItem Content="Visa Debit - Fee £0:00" HorizontalAlignment="Left" Width="264"/>
+                <ComboBoxItem Content="MasterCard Credit - Fee £0:00" HorizontalAlignment="Left" Width="264"/>
+                <ComboBoxItem Content="MasterCard Debit - Fee £0:00" HorizontalAlignment="Left" Width="264"/>
+                <ComboBoxItem Content="Maestro - Fee £0:00" HorizontalAlignment="Left" Width="264"/>
+            </ComboBox>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="61" Margin="10,343,0,0" VerticalAlignment="Top" Width="774">
+            <Button Content="" HorizontalAlignment="Left" Margin="314,1,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}">
+                <Button.Background>
+                    <ImageBrush ImageSource="images\confirm.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Button x:Name="backButton" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75">
+            <Button.Background>
+                <ImageBrush ImageSource="images\back.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Page>
