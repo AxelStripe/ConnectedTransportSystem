@@ -18,7 +18,7 @@ namespace ConnectedTransportSystem_Adrian
     /// <summary>
     /// Interaction logic for cashPaym.xaml
     /// </summary>
-    public partial class cashPaym : Page
+    public partial class cashPaym : Window
     {
         public cashPaym()
         {

@@ -28,5 +28,10 @@ namespace ConnectedTransportSystem_Adrian
             _data = data;
             mnuUser.Header = _data.GetLoggedInUser().GetUsername();
         }
+
+        private void logOut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

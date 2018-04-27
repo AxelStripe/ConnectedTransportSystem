@@ -18,11 +18,16 @@ namespace ConnectedTransportSystem_Adrian
     /// <summary>
     /// Interaction logic for lookupRoutes.xaml
     /// </summary>
-    public partial class lookupRoutes : Page
+    public partial class lookupRoutes : Window
     {
         public lookupRoutes()
         {
             InitializeComponent();
+        }
+
+        private void lstRoutes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

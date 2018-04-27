@@ -18,7 +18,7 @@ namespace ConnectedTransportSystem_Adrian
     /// <summary>
     /// Interaction logic for journeyPlanner.xaml
     /// </summary>
-    public partial class journeyPlanner : Page
+    public partial class journeyPlanner : Window
     {
         public journeyPlanner()
         {

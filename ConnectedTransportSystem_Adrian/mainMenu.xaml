@@ -32,8 +32,10 @@
                 <ImageBrush ImageSource="images\back.png"/>
             </Button.Background>
         </Button>
-        <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Width="150"  Height="75" Foreground="Blue">
-            <MenuItem x:Name="mnuUser" Header="Username" Icon="images/Users-icon.png" Width="150" Height="75" FontWeight="DemiBold" FontSize="14px"></MenuItem>
+        <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Width="200"  Height="75" Foreground="Blue">
+            <MenuItem x:Name="mnuUser" Header="Username" Width="200" Height="75" Icon="images\Users-icon.png" FontWeight="DemiBold" FontSize="14px">
+                <MenuItem x:Name="logOut" Header="Log Out" Width="200" Height="25" Icon="images\log-out.png" Click="logOut_Click"/>
+            </MenuItem>
         </Menu>
 
     </Grid>

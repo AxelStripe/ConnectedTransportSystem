@@ -26,12 +26,14 @@ namespace ConnectedTransportSystem_Adrian
         {
             InitializeComponent();
             _data = new TransportData();
+            EnableLogIn();
         }
 
         public MainWindow(TransportData data)
         {
             InitializeComponent();
             _data = data;
+            EnableLogIn();
         }
 
         private void btnLogIn_Click(object sender, RoutedEventArgs e)
@@ -58,12 +60,20 @@ namespace ConnectedTransportSystem_Adrian
 
         private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            EnableLogIn();
         }
 
         private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
         {
+            EnableLogIn();
+        }
 
+        void EnableLogIn()
+        {
+            if (txtPassword.Text.Length > 0 && txtUsername.Text.Length > 0)
+                btnLogIn.IsEnabled = true;
+            else
+                btnLogIn.IsEnabled = false;
         }
     }
 }

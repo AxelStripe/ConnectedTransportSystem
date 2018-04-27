@@ -18,7 +18,7 @@ namespace ConnectedTransportSystem_Adrian
     /// <summary>
     /// Interaction logic for choosePaym.xaml
     /// </summary>
-    public partial class choosePaym : Page
+    public partial class choosePaym : Window
     {
         public choosePaym()
         {

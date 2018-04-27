@@ -18,19 +18,14 @@ namespace ConnectedTransportSystem_Adrian
     /// <summary>
     /// Interaction logic for payDetails.xaml
     /// </summary>
-    public partial class payDetails : Page
+    public partial class payDetails : Window
     {
         public payDetails()
         {
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        private void logOut_Click(object sender, RoutedEventArgs e)
         {
 
         }
