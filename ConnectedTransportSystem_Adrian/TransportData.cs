@@ -40,7 +40,7 @@ namespace ConnectedTransportSystem_Adrian
                     if (password == u.GetPassword())
                     {
                         //log user in
-                        SetLoggedInUser(u);
+                        _loggedInUser = u;
                         return true;
                     }   
                     else
@@ -51,14 +51,19 @@ namespace ConnectedTransportSystem_Adrian
             return false;
         }
 
+        public bool ValidateEmail(string email)
+        {
+            return email == _loggedInUser.GetEmail();
+        }
+
         public TransportUser GetLoggedInUser()
         {
             return _loggedInUser;
         }
 
-        public void SetLoggedInUser(TransportUser user)
+        public void LogOutUser()
         {
-            _loggedInUser = user;
+            _loggedInUser = null;
         }
     }
 }

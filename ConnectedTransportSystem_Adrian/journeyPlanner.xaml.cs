@@ -20,9 +20,41 @@ namespace ConnectedTransportSystem_Adrian
     /// </summary>
     public partial class journeyPlanner : Window
     {
-        public journeyPlanner()
+        private TransportData _data;
+        public journeyPlanner(TransportData data)
         {
             InitializeComponent();
+            _data = data;
+            mnuUser.Header = _data.GetLoggedInUser().GetUsername();
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            //return to main menu
+            mainMenu main = new mainMenu(_data);
+            main.Show();
+            this.Close();
+        }
+
+        private void logOut_Click(object sender, RoutedEventArgs e)
+        {
+            //log out and go back to log in screen
+            _data.LogOutUser();
+            MainWindow loginScreen = new MainWindow(_data);
+            loginScreen.Show();
+            this.Close();
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            //journey planner
+
+        }
+
+        void EnableSearch()
+        {
+            
+        }
+
     }
 }

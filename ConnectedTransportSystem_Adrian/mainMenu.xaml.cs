@@ -31,7 +31,19 @@ namespace ConnectedTransportSystem_Adrian
 
         private void logOut_Click(object sender, RoutedEventArgs e)
         {
+            //log user out and return to login menu
+            _data.LogOutUser();
+            MainWindow loginWindow = new MainWindow(_data);
+            loginWindow.Show();
+            this.Close();
+        }
 
+        private void btnPlanJourney_Click(object sender, RoutedEventArgs e)
+        {
+            //go to plan journey window
+            journeyPlanner planner = new journeyPlanner(_data);
+            planner.Show();
+            this.Close();
         }
     }
 }

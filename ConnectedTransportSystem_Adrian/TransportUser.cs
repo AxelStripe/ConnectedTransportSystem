@@ -10,11 +10,13 @@ namespace ConnectedTransportSystem_Adrian
     {
         private string _username;
         private string _password;
+        private string _email;
 
-        public TransportUser(string username, string password)
+        public TransportUser(string username, string password, string email)
         {
             _username = username;
             _password = password;
+            _email = email;
         }
 
         public string GetUsername()
@@ -25,6 +27,11 @@ namespace ConnectedTransportSystem_Adrian
         public string GetPassword()
         {
             return _password;
+        }
+
+        public string GetEmail()
+        {
+            return _email;
         }
     }
 }

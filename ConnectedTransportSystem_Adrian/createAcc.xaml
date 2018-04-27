@@ -19,7 +19,7 @@
             <Label Content="Full Name:" HorizontalAlignment="Left" Margin="135,30,0,0" VerticalAlignment="Top" Width="121" FontSize="16" Foreground="#FFFDFAFA"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="233,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" Background="{x:Null}" Foreground="#FFFDF8F8"/>
             <Label Content="Email:" HorizontalAlignment="Left" Margin="135,58,0,0" VerticalAlignment="Top" Width="121" FontSize="16" Foreground="#FFFDFAFA"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="233,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" Background="{x:Null}" Foreground="#FFFDF8F8"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="233,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" Background="{x:Null}" Foreground="#FFFDF8F8" TextChanged="txtEmail_TextChanged"/>
             <Label Content="Address:" HorizontalAlignment="Left" Margin="135,86,0,0" VerticalAlignment="Top" Width="121" FontSize="16" Foreground="#FFFDFAFA"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="233,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" Background="{x:Null}" Foreground="#FFFDF8F8"/>
             <Label Content="Postcode:" HorizontalAlignment="Left" Margin="135,114,0,0" VerticalAlignment="Top" Width="121" FontSize="16" Foreground="#FFFDFAFA"/>
@@ -35,6 +35,7 @@
                     <ImageBrush ImageSource="images\signUp.png"/>
                 </Button.Background>
             </Button>
+            <Image x:Name="imgSignUp" Source="images\signUp_inactive.png" HorizontalAlignment="Left" Margin="298,1,0,0" VerticalAlignment="Top" Width="150" Height="50" Stretch="Fill"/>
         </Grid>
         <Button x:Name="btnBack" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Click="btnBack_Click">
             <Button.Background>

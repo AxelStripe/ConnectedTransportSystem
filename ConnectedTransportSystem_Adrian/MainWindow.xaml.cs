@@ -70,10 +70,27 @@ namespace ConnectedTransportSystem_Adrian
 
         void EnableLogIn()
         {
-            if (txtPassword.Text.Length > 0 && txtUsername.Text.Length > 0)
-                btnLogIn.IsEnabled = true;
+            if (txtPassword.Text.Length > 0)
+                txtPassword.Background = null;
             else
-                btnLogIn.IsEnabled = false;
+                txtPassword.Background = Brushes.Red;
+
+            if (txtUsername.Text.Length > 0)
+                txtUsername.Background = null;
+            else
+                txtUsername.Background = Brushes.Red;
+
+            if (txtPassword.Text.Length > 0 && txtUsername.Text.Length > 0)
+            {
+                imgLogIn.Visibility = Visibility.Hidden;
+                btnLogIn.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                imgLogIn.Visibility = Visibility.Visible;
+                btnLogIn.Visibility = Visibility.Hidden;
+            }
         }
+
     }
 }

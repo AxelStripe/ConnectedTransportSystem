@@ -36,7 +36,7 @@ namespace ConnectedTransportSystem_Adrian
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            if(SignUpUser(txtUsername.Text, txtPassword.Text))
+            if(SignUpUser(txtUsername.Text, txtPassword.Text, txtEmail.Text))
             {
                 MessageBox.Show("Welcome, " + txtUsername.Text);
                 ReturnToLogin();
@@ -47,12 +47,17 @@ namespace ConnectedTransportSystem_Adrian
             }
         }
 
-        bool SignUpUser(string username, string password)
+        bool SignUpUser(string username, string password, string email)
         {
             //attempt to add a new user
-            TransportUser newUser = new TransportUser(username, password);
+            TransportUser newUser = new TransportUser(username, password, email);
 
             return _data.AddUser(newUser);
+        }
+
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            EnableSignUp();
         }
 
         private void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
@@ -65,6 +70,7 @@ namespace ConnectedTransportSystem_Adrian
             EnableSignUp();
         }
 
+
         void ReturnToLogin()
         {
             //go back to login menu
@@ -75,10 +81,31 @@ namespace ConnectedTransportSystem_Adrian
 
         void EnableSignUp()
         {
-            if (txtUsername.Text.Length > 0 && txtPassword.Text.Length > 0)
-                btnSignUp.IsEnabled = true;
+            if (txtEmail.Text.Length > 0)
+                txtEmail.Background = null;
             else
-                btnSignUp.IsEnabled = false;
+                txtEmail.Background = Brushes.Red;
+
+            if (txtUsername.Text.Length > 0)
+                txtUsername.Background = null;
+            else
+                txtUsername.Background = Brushes.Red;
+
+            if (txtPassword.Text.Length > 0)
+                txtPassword.Background = null;
+            else
+                txtPassword.Background = Brushes.Red;
+
+            if (txtUsername.Text.Length > 0 && txtPassword.Text.Length > 0 && txtEmail.Text.Length > 0)
+            {
+                btnSignUp.Visibility = Visibility.Visible;
+                imgSignUp.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                btnSignUp.Visibility = Visibility.Hidden;
+                imgSignUp.Visibility = Visibility.Visible;
+            }
         }
     }
 }
