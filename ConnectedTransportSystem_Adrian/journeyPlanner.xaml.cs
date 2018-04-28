@@ -26,6 +26,7 @@ namespace ConnectedTransportSystem_Adrian
             InitializeComponent();
             _data = data;
             mnuUser.Header = _data.GetLoggedInUser().GetUsername();
+            EnableSearch();
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -47,14 +48,65 @@ namespace ConnectedTransportSystem_Adrian
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            //journey planner
-
+            //look up routes
+            _data.SetJourney(cboStart.Text, txtStart.Text, cboEnd.Text, txtEnd.Text);
+            lookupRoutes lookup = new lookupRoutes(_data);
+            lookup.Show();
+            this.Close();
         }
 
         void EnableSearch()
         {
-            
+            if (txtStart.Text.Length > 0)
+                txtStart.Background = Brushes.Transparent;
+            else
+                txtStart.Background = Brushes.Red;
+
+            if (txtEnd.Text.Length > 0)
+                txtEnd.Background = Brushes.Transparent;
+            else
+                txtEnd.Background = Brushes.Red;
+
+            if (cboStart.SelectedIndex >= 0 
+                && cboEnd.SelectedIndex >=0 
+                && txtStart.Text.Length > 0 
+                && txtEnd.Text.Length > 0)
+            {
+                btnSearch.Visibility = Visibility.Visible;
+                imgSearch.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                btnSearch.Visibility = Visibility.Hidden;
+                imgSearch.Visibility = Visibility.Visible;
+            }
         }
 
+        private void txtStart_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            EnableSearch();
+        }
+
+        private void txtEnd_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            EnableSearch();
+        }
+
+        private void cboStart_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            EnableSearch();
+        }
+
+        private void cboEnd_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            EnableSearch();
+        }
+
+        private void mnuChangePw_Click(object sender, RoutedEventArgs e)
+        {
+            resetPass reset = new resetPass(_data, 1);
+            reset.Show();
+            this.Close();
+        }
     }
 }

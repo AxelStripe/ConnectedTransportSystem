@@ -186,5 +186,11 @@
     <Resource Include="images\Users-icon.png" />
     <Resource Include="images\yes.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\warning-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\change-password.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

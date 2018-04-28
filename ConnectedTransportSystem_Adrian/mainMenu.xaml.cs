@@ -45,5 +45,12 @@ namespace ConnectedTransportSystem_Adrian
             planner.Show();
             this.Close();
         }
+
+        private void mnuChangePw_Click(object sender, RoutedEventArgs e)
+        {
+            resetPass reset = new resetPass(_data, 0);
+            reset.Show();
+            this.Close();
+        }
     }
 }

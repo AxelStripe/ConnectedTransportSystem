@@ -32,6 +32,11 @@
                 <MenuItem.Icon>
                     <Image Source="images\Users-icon.png"/>
                 </MenuItem.Icon>
+                <MenuItem x:Name="mnuChangePw" Header="Reset Password" Width="200" Height="25" Click="mnuChangePw_Click">
+                    <MenuItem.Icon>
+                        <Image Source="images\change-password.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
                 <MenuItem x:Name="logOut" Header="Log Out" Width="200" Height="25" Click="logOut_Click">
                     <MenuItem.Icon>
                         <Image Source="images\log-out.png"/>

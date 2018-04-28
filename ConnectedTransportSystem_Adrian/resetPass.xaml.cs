@@ -20,13 +20,15 @@ namespace ConnectedTransportSystem_Adrian
     /// </summary>
     public partial class resetPass : Window
     {
-        TransportData _data;
-        public resetPass(TransportData data)
+        private TransportData _data;
+        private int _previous;
+
+        public resetPass(TransportData data, int previous)
         {
             InitializeComponent();
             _data = data;
+            _previous = previous;
             EnableSubmit();
-
         }
 
         private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
@@ -45,6 +47,36 @@ namespace ConnectedTransportSystem_Adrian
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             //return to previous window
+
+            /*
+             * 0 = Main Menu
+             * 1 = Journey planner
+             * 2 = look up routes
+             * more...
+             * */
+            switch (_previous)
+            {
+                case 0:
+                    //main menu
+                    mainMenu main = new mainMenu(_data);
+                    main.Show();
+                    this.Close();
+                    break;
+                case 1:
+                    //journey planner
+                    journeyPlanner planner = new journeyPlanner(_data);
+                    planner.Show();
+                    this.Close();
+                    break;
+                case 2:
+                    //look up routes
+                    lookupRoutes lookup = new lookupRoutes(_data);
+                    lookup.Show();
+                    this.Close();
+                    break;
+                default:
+                    break;
+            }
         }
 
         void EnableSubmit()

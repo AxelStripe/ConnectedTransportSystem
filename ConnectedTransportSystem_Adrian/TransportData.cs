@@ -11,6 +11,12 @@ namespace ConnectedTransportSystem_Adrian
         private List<TransportUser> _users;
         private TransportUser _loggedInUser;
 
+        //journey details
+        private string _startPoint;
+        private string _startTime;
+        private string _endPoint;
+        private string _endTime;
+
         public TransportData()
         {
             _users = new List<TransportUser>();
@@ -64,6 +70,19 @@ namespace ConnectedTransportSystem_Adrian
         public void LogOutUser()
         {
             _loggedInUser = null;
+        }
+
+        public void SetJourney(string startPoint, string startTime, string endPoint, string endTime)
+        {
+            _startPoint = startPoint;
+            _startTime = startTime;
+            _endPoint = endPoint;
+            _endTime = endTime;
+        }
+
+        public string GetJourney()
+        {
+            return "Departing From: " + _startPoint + ", at: " + _startTime + ". Arriving at: " + _endPoint + ", at: " + _endTime;
         }
     }
 }
