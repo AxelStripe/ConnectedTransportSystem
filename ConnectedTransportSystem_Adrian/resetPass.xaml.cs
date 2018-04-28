@@ -52,6 +52,9 @@ namespace ConnectedTransportSystem_Adrian
              * 0 = Main Menu
              * 1 = Journey planner
              * 2 = look up routes
+             * 3 = choose payment
+             * 4 = cash payment
+             * 5 = card payment
              * more...
              * */
             switch (_previous)
@@ -72,6 +75,24 @@ namespace ConnectedTransportSystem_Adrian
                     //look up routes
                     lookupRoutes lookup = new lookupRoutes(_data);
                     lookup.Show();
+                    this.Close();
+                    break;
+                case 3:
+                    //choose payment
+                    choosePaym paym = new choosePaym(_data);
+                    paym.Show();
+                    this.Close();
+                    break;
+                case 4:
+                    //cash payment
+                    cashPaym cash = new cashPaym(_data);
+                    cash.Show();
+                    this.Close();
+                    break;
+                case 5:
+                    //cash payment
+                    payDetails card = new payDetails(_data);
+                    card.Show();
                     this.Close();
                     break;
                 default:

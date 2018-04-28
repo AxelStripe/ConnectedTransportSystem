@@ -20,9 +20,46 @@ namespace ConnectedTransportSystem_Adrian
     /// </summary>
     public partial class cashPaym : Window
     {
-        public cashPaym()
+        private TransportData _data;
+
+        public cashPaym(TransportData data)
         {
             InitializeComponent();
+            _data = data;
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            //go back to choose payment
+            choosePaym paym = new choosePaym(_data);
+            paym.Show();
+            this.Close();
+
+        }
+
+        private void mnuChangePw_Click(object sender, RoutedEventArgs e)
+        {
+            resetPass reset = new resetPass(_data, 4);
+            reset.Show();
+            this.Close();
+        }
+
+        private void logOut_Click(object sender, RoutedEventArgs e)
+        {
+            //log user out and return to login menu
+            _data.LogOutUser();
+            MainWindow loginWindow = new MainWindow(_data);
+            loginWindow.Show();
+            this.Close();
+        }
+
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            //trnasaction complete
+            Page2 transactionComplete = new Page2(_data);
+            transactionComplete.Show();
+            this.Close();
+
         }
     }
 }

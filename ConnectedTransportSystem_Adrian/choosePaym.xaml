@@ -16,28 +16,45 @@
         </Grid>
         <Grid HorizontalAlignment="Left" Height="199" Margin="10,114,0,0" VerticalAlignment="Top" Width="774">
             <TextBlock HorizontalAlignment="Left" Margin="290,0,0,0" TextWrapping="Wrap" Text="How would you like to pay?" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontSize="16"/>
-            <Button Content="" HorizontalAlignment="Left" Margin="129,78,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button x:Name="btnCash" HorizontalAlignment="Left" Margin="129,78,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnCash_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\cash.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="314,78,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}">
+            <Button x:Name="btnCard" HorizontalAlignment="Left" Margin="314,78,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="btnCard_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\card.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="498,78,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button x:Name="btnPayPal" HorizontalAlignment="Left" Margin="498,78,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnPayPal_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\paypal.png"/>
                 </Button.Background>
             </Button>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="61" Margin="10,343,0,0" VerticalAlignment="Top" Width="774"/>
-        <Button x:Name="backButton" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75">
+        <Button x:Name="btnBack" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Click="btnBack_Click">
             <Button.Background>
                 <ImageBrush ImageSource="images\back.png"/>
             </Button.Background>
         </Button>
+        <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Width="200"  Height="75" Foreground="Blue">
+            <MenuItem x:Name="mnuUser" Header="Username" Width="200" Height="75" FontWeight="DemiBold" FontSize="16px" Padding="30,0,0,0">
+                <MenuItem.Icon>
+                    <Image Source="images\Users-icon.png"/>
+                </MenuItem.Icon>
+                <MenuItem x:Name="mnuChangePw" Header="Reset Password" Width="200" Height="25" Click="mnuChangePw_Click">
+                    <MenuItem.Icon>
+                        <Image Source="images\change-password.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="logOut" Header="Log Out" Width="200" Height="25" Click="logOut_Click">
+                    <MenuItem.Icon>
+                        <Image Source="images\log-out.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
 
     </Grid>
 </Window>

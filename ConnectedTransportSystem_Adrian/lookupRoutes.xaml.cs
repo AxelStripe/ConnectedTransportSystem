@@ -55,7 +55,10 @@ namespace ConnectedTransportSystem_Adrian
 
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
-
+            //go to payment selector
+            choosePaym paym = new choosePaym(_data);
+            paym.Show();
+            this.Close();
         }
 
         void EnableConfirm()

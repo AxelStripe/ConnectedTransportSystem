@@ -1,12 +1,11 @@
-﻿<Page x:Class="ConnectedTransportSystem_Adrian.Page2"
+﻿<Window x:Class="ConnectedTransportSystem_Adrian.Page2"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ConnectedTransportSystem_Adrian"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page2">
+      Height="450" Width="800" Title="Page2">
 
     <Grid>
         <Grid.Background>
@@ -15,29 +14,29 @@
         <Grid HorizontalAlignment="Left" Height="61" Margin="75,10,0,0" VerticalAlignment="Top" Width="649">
             <Label x:Name="pageTitle" Content="transaction complete" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Top" Width="629" Height="51" Foreground="#FFFDF9F9" FontSize="36" FontFamily="Perpetua Titling MT"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="306" Margin="10,114,0,0" VerticalAlignment="Top" Width="774">
-            <Label Content="Transaction Ref No:" HorizontalAlignment="Left" Margin="181,-18,0,0" VerticalAlignment="Top" Foreground="#FFFCF8F8" FontSize="16"/>
-            <Label Content="1234567AD" HorizontalAlignment="Left" Margin="398,-18,0,0" VerticalAlignment="Top" Foreground="#FFFCF8F8" FontSize="16"/>
-            <TextBlock HorizontalAlignment="Center" Margin="48,19,51,0" TextWrapping="Wrap" Text="Thank You for using the Connected Transport System. We would like to hear about your experience. An email will be sent to you shortly with a a short survery about your experience with the system." VerticalAlignment="Top" Width="675" Foreground="#FFFFFBFB" FontSize="16"/>
-            <TextBlock HorizontalAlignment="Center" Margin="300,105,254,0" TextWrapping="Wrap" Text="Print Tickets Now?" VerticalAlignment="Top" Width="220" Foreground="#FFFFFBFB" FontSize="16" Height="19"/>
-            <Button Content="" HorizontalAlignment="Left" Margin="127,129,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}">
+        <Grid HorizontalAlignment="Left" Height="344" Margin="10,76,0,-1" VerticalAlignment="Top" Width="774">
+            <Label Content="Transaction Ref No:" HorizontalAlignment="Left" Margin="182,12,0,0" VerticalAlignment="Top" Foreground="#FFFCF8F8" FontSize="16"/>
+            <Label Content="1234567AD" HorizontalAlignment="Left" Margin="399,12,0,0" VerticalAlignment="Top" Foreground="#FFFCF8F8" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Center" Margin="49,49,50,0" TextWrapping="Wrap" Text="Thank You for using the Connected Transport System. We would like to hear about your experience. An email will be sent to you shortly with a a short survery about your experience with the system." VerticalAlignment="Top" Width="675" Foreground="#FFFFFBFB" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Center" Margin="301,135,253,0" TextWrapping="Wrap" Text="Print Tickets Now?" VerticalAlignment="Top" Width="220" Foreground="#FFFFFBFB" FontSize="16" Height="19"/>
+            <Button x:Name="btnYesPrint" HorizontalAlignment="Left" Margin="128,159,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="btnYesPrint_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\yes.png"/>
                 </Button.Background>
             </Button>
 
-            <Button Content="" HorizontalAlignment="Left" Margin="456,129,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}">
+            <Button x:Name="btnNoPrint" HorizontalAlignment="Left" Margin="457,159,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Click="btnNoPrint_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\no.png"/>
                 </Button.Background>
             </Button>
-            <TextBlock HorizontalAlignment="Center" Margin="214,202,254,0" TextWrapping="Wrap" Text="Would you like to start a new transaction?" VerticalAlignment="Top" Width="306" Foreground="#FFFFFBFB" FontSize="16" Height="21"/>
-            <Button Content="" HorizontalAlignment="Left" Margin="456,228,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <TextBlock HorizontalAlignment="Center" Margin="215,232,253,0" TextWrapping="Wrap" Text="Would you like to start a new transaction?" VerticalAlignment="Top" Width="306" Foreground="#FFFFFBFB" FontSize="16" Height="21"/>
+            <Button x:Name="btnNoNew" HorizontalAlignment="Left" Margin="457,258,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnNoNew_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\no.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="127,228,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}">
+            <Button x:Name="btnYesNew" HorizontalAlignment="Left" Margin="128,258,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="btnYesNew_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\yes.png"/>
                 </Button.Background>
@@ -45,4 +44,4 @@
         </Grid>
 
     </Grid>
-</Page>
+</Window>
