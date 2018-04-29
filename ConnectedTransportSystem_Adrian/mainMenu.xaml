@@ -15,18 +15,21 @@
             <Label x:Name="pageTitle" Content="main menu" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Top" Width="629" Height="51" Foreground="#FFFDF9F9" FontSize="36" FontFamily="Perpetua Titling MT"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="199" Margin="10,114,0,0" VerticalAlignment="Top" Width="774">
-            <Button x:Name="btnPlanJourney" HorizontalAlignment="Left" Margin="157,111,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnPlanJourney_Click">
+            <Image x:Name="imgPlanJourney" Source="images\Transport.jpg" HorizontalAlignment="Left" Margin="100,0,0,0" MouseDown="imgPlanJourney_MouseDown" MouseEnter="imgPlanJourney_MouseEnter" MouseLeave="imgPlanJourney_MouseLeave"/>
+            <Image x:Name="imgUpdates" Source="images\updatesI.jpg" HorizontalAlignment="Right" Width="265" Margin="0,0,89,0" Stretch="Fill" MouseDown="imgUpdates_MouseDown" MouseEnter="imgUpdates_MouseEnter" MouseLeave="imgUpdates_MouseLeave"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="86" Margin="10,318,0,0" VerticalAlignment="Top" Width="774">
+            <Button x:Name="btnPlanJourney" HorizontalAlignment="Left" Margin="156,0,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnPlanJourney_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\journey.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="" HorizontalAlignment="Left" Margin="477,111,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button x:Name="btnUpdates" HorizontalAlignment="Left" Margin="475,0,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnUpdates_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\updates.png"/>
                 </Button.Background>
             </Button>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="61" Margin="10,343,0,0" VerticalAlignment="Top" Width="774"/>
         <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Width="200"  Height="75" Foreground="Blue">
             <MenuItem x:Name="mnuUser" Header="Username" Width="200" Height="75" FontWeight="DemiBold" FontSize="16px" Padding="30,0,0,0">
                 <MenuItem.Icon>

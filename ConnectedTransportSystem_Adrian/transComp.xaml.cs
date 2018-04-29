@@ -30,12 +30,12 @@ namespace ConnectedTransportSystem_Adrian
 
         private void btnYesPrint_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Printing tickets...");
+            MessageBox.Show("Printing tickets...", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void btnNoPrint_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Thank you for your transaction!");
+            MessageBox.Show("Thank you for your transaction!", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Information);
 
             mainMenu main = new mainMenu(_data);
             main.Show();
@@ -51,10 +51,26 @@ namespace ConnectedTransportSystem_Adrian
 
         private void btnNoNew_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Thank you for your transaction!");
+            MessageBox.Show("Thank you for your transaction!", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Information);
 
             mainMenu main = new mainMenu(_data);
             main.Show();
+            this.Close();
+        }
+
+        private void logOut_Click(object sender, RoutedEventArgs e)
+        {
+            //log user out and return to login menu
+            _data.LogOutUser();
+            MainWindow loginWindow = new MainWindow(_data);
+            loginWindow.Show();
+            this.Close();
+        }
+
+        private void mnuChangePw_Click(object sender, RoutedEventArgs e)
+        {
+            resetPass reset = new resetPass(_data, 6);
+            reset.Show();
             this.Close();
         }
     }

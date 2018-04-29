@@ -39,9 +39,9 @@ namespace ConnectedTransportSystem_Adrian
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             if (_data.ValidateEmail(txtEmail.Text))
-                MessageBox.Show("E-Mail address confirmed, we will send an Email with instructions on how to reset your password."); //email matches
+                MessageBox.Show("E-Mail address confirmed, we will send an Email with instructions on how to reset your password.", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Information); //email matches
             else
-                MessageBox.Show("E-Mail address invalid, please re-enter your E-Mail address.");
+                MessageBox.Show("E-Mail address invalid, please re-enter your E-Mail address.", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -55,7 +55,7 @@ namespace ConnectedTransportSystem_Adrian
              * 3 = choose payment
              * 4 = cash payment
              * 5 = card payment
-             * more...
+             * 6 = transaction complete
              * */
             switch (_previous)
             {
@@ -95,6 +95,12 @@ namespace ConnectedTransportSystem_Adrian
                     card.Show();
                     this.Close();
                     break;
+                case 6:
+                    //transaction complete
+                    Page2 complete = new Page2(_data);
+                    complete.Show();
+                    this.Close();
+                    break;
                 default:
                     break;
             }
@@ -104,16 +110,25 @@ namespace ConnectedTransportSystem_Adrian
         {
             if(txtEmail.Text.Length > 0)
             {
-                txtEmail.Background = null;
+                imgEmail.Visibility = Visibility.Hidden;
                 btnSubmit.Visibility = Visibility.Visible;
                 imgSubmit.Visibility = Visibility.Hidden;
             }
             else
             {
-                txtEmail.Background = Brushes.Red;
+                imgEmail.Visibility = Visibility.Visible;
                 btnSubmit.Visibility = Visibility.Hidden;
                 imgSubmit.Visibility = Visibility.Visible;
             }
+        }
+
+        private void logOut_Click(object sender, RoutedEventArgs e)
+        {
+            //log user out and return to login menu
+            _data.LogOutUser();
+            MainWindow loginWindow = new MainWindow(_data);
+            loginWindow.Show();
+            this.Close();
         }
     }
 }

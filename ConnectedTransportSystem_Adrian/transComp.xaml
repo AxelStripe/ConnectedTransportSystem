@@ -11,6 +11,23 @@
         <Grid.Background>
             <ImageBrush ImageSource="images\background.png"/>
         </Grid.Background>
+        <Menu HorizontalAlignment="Right" VerticalAlignment="Top" Width="200"  Height="75" Foreground="Blue">
+            <MenuItem x:Name="mnuUser" Header="Username" Width="200" Height="75" FontWeight="DemiBold" FontSize="16px" Padding="30,0,0,0">
+                <MenuItem.Icon>
+                    <Image Source="images\Users-icon.png"/>
+                </MenuItem.Icon>
+                <MenuItem x:Name="mnuChangePw" Header="Reset Password" Width="200" Height="25" Click="mnuChangePw_Click">
+                    <MenuItem.Icon>
+                        <Image Source="images\change-password.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="logOut" Header="Log Out" Width="200" Height="25" Click="logOut_Click">
+                    <MenuItem.Icon>
+                        <Image Source="images\log-out.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
         <Grid HorizontalAlignment="Left" Height="61" Margin="75,10,0,0" VerticalAlignment="Top" Width="649">
             <Label x:Name="pageTitle" Content="transaction complete" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Top" Width="629" Height="51" Foreground="#FFFDF9F9" FontSize="36" FontFamily="Perpetua Titling MT"/>
         </Grid>

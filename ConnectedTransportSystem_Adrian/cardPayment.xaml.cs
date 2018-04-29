@@ -79,7 +79,32 @@ namespace ConnectedTransportSystem_Adrian
 
         void EnableConfirm()
         {
-            if(txtCardNo.Text.Length > 0 &&
+            if (txtCardNo.Text.Length > 0)
+                imgCardNo.Visibility = Visibility.Hidden;
+            else
+                imgCardNo.Visibility = Visibility.Visible;
+
+            if (txtCSV.Text.Length > 0)
+                imgCSV.Visibility = Visibility.Hidden;
+            else
+                imgCSV.Visibility = Visibility.Visible;
+
+            if (txtExpDate.Text.Length > 0)
+                imgExpDate.Visibility = Visibility.Hidden;
+            else
+                imgExpDate.Visibility = Visibility.Visible;
+
+            if (txtName.Text.Length > 0)
+                imgName.Visibility = Visibility.Hidden;
+            else
+                imgName.Visibility = Visibility.Visible;
+
+            if (cboType.SelectedIndex >= 0)
+                imgType.Visibility = Visibility.Hidden;
+            else
+                imgType.Visibility = Visibility.Visible;
+
+            if (txtCardNo.Text.Length > 0 &&
                 txtCSV.Text.Length > 0 &&
                 txtExpDate.Text.Length > 0 &&
                 txtName.Text.Length > 0 &&

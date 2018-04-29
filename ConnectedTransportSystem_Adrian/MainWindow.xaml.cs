@@ -47,7 +47,7 @@ namespace ConnectedTransportSystem_Adrian
                 this.Hide();
             }
             else
-                MessageBox.Show("Authorisation Failed.");
+                MessageBox.Show("Authorisation Failed.", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Warning);
             
         }
 
@@ -71,14 +71,14 @@ namespace ConnectedTransportSystem_Adrian
         void EnableLogIn()
         {
             if (txtPassword.Text.Length > 0)
-                txtPassword.Background = null;
+                imgPassword.Visibility = Visibility.Hidden;
             else
-                txtPassword.Background = Brushes.Red;
+                imgPassword.Visibility = Visibility.Visible;
 
             if (txtUsername.Text.Length > 0)
-                txtUsername.Background = null;
+                imgUsername.Visibility = Visibility.Hidden;
             else
-                txtUsername.Background = Brushes.Red;
+                imgUsername.Visibility = Visibility.Visible;
 
             if (txtPassword.Text.Length > 0 && txtUsername.Text.Length > 0)
             {

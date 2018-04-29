@@ -58,14 +58,24 @@ namespace ConnectedTransportSystem_Adrian
         void EnableSearch()
         {
             if (txtStart.Text.Length > 0)
-                txtStart.Background = Brushes.Transparent;
+                imgStartTime.Visibility = Visibility.Hidden;
             else
-                txtStart.Background = Brushes.Red;
+                imgStartTime.Visibility = Visibility.Visible;
 
             if (txtEnd.Text.Length > 0)
-                txtEnd.Background = Brushes.Transparent;
+                imgEndTime.Visibility = Visibility.Hidden;
             else
-                txtEnd.Background = Brushes.Red;
+                imgEndTime.Visibility = Visibility.Visible;
+
+            if (cboStart.SelectedIndex >= 0)
+                imgStartPoint.Visibility = Visibility.Hidden;
+            else
+                imgStartPoint.Visibility = Visibility.Visible;
+
+            if (cboEnd.SelectedIndex >= 0)
+                imgEndPoint.Visibility = Visibility.Hidden;
+            else
+                imgEndPoint.Visibility = Visibility.Visible;
 
             if (cboStart.SelectedIndex >= 0 
                 && cboEnd.SelectedIndex >=0 

@@ -55,23 +55,84 @@ namespace ConnectedTransportSystem_Adrian
         private void btnCash_Click(object sender, RoutedEventArgs e)
         {
             //choose cash
-            cashPaym cash = new cashPaym(_data);
-            cash.Show();
-            this.Close();
+            ChooseCash();
         }
 
         private void btnCard_Click(object sender, RoutedEventArgs e)
         {
             //choose card
-            payDetails card = new payDetails(_data);
-            card.Show();
-            this.Close();
+            ChooseCard();
         }
 
         private void btnPayPal_Click(object sender, RoutedEventArgs e)
         {
             //choose paypal
-            MessageBox.Show("Processing PayPal Payment");
+            ChoosePayPal();
+        }
+
+        private void imgCash_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ChooseCash();
+        }
+
+        private void imgCash_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void imgCash_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
+        }
+
+        private void imgCard_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ChooseCard();
+        }
+
+        private void imgCard_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void imgCard_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
+        }
+
+        private void imgPayPal_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ChoosePayPal();
+        }
+
+        private void imgPayPal_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void imgPayPal_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
+        }
+
+        void ChooseCash()
+        {
+            //choose cash
+            cashPaym cash = new cashPaym(_data);
+            cash.Show();
+            this.Close();
+        }
+
+        void ChooseCard()
+        {
+            payDetails card = new payDetails(_data);
+            card.Show();
+            this.Close();
+        }
+
+        void ChoosePayPal()
+        {
+            MessageBox.Show("Processing PayPal Payment", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Information);
             Page2 complete = new Page2(_data);
             complete.Show();
             this.Close();

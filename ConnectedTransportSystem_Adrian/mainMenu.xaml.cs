@@ -40,10 +40,7 @@ namespace ConnectedTransportSystem_Adrian
 
         private void btnPlanJourney_Click(object sender, RoutedEventArgs e)
         {
-            //go to plan journey window
-            journeyPlanner planner = new journeyPlanner(_data);
-            planner.Show();
-            this.Close();
+            PlanJourney();
         }
 
         private void mnuChangePw_Click(object sender, RoutedEventArgs e)
@@ -51,6 +48,49 @@ namespace ConnectedTransportSystem_Adrian
             resetPass reset = new resetPass(_data, 0);
             reset.Show();
             this.Close();
+        }
+
+        private void btnUpdates_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("No updates to display!", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void imgPlanJourney_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            PlanJourney();
+        }
+
+        void PlanJourney()
+        {
+            //go to plan journey window
+            journeyPlanner planner = new journeyPlanner(_data);
+            planner.Show();
+            this.Close();
+        }
+
+        private void imgUpdates_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("No updates to display!", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void imgPlanJourney_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void imgPlanJourney_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
+        }
+
+        private void imgUpdates_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Hand;
+        }
+
+        private void imgUpdates_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
         }
     }
 }

@@ -19,6 +19,8 @@
             <Label Content="Password:" HorizontalAlignment="Left" Margin="176,90,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
             <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="333,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontSize="16" Background="{x:Null}" TextChanged="txtPassword_TextChanged"/>
             <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="23" Margin="333,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontSize="16" Background="{x:Null}" TextChanged="txtUsername_TextChanged"/>
+            <Image x:Name="imgUsername" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,42,210,127"/>
+            <Image x:Name="imgPassword" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,91,210,78"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="61" Margin="10,343,0,0" VerticalAlignment="Top" Width="774">
             <Button x:Name="btnLogIn" HorizontalAlignment="Left" Margin="185,0,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}" Visibility="Hidden" Click="btnLogIn_Click">

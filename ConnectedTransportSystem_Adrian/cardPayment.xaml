@@ -21,9 +21,13 @@
             <Label Content="Expiry Date:" HorizontalAlignment="Left" Margin="160,110,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFFCFBFB"/>
             <Label Content="CSV:" HorizontalAlignment="Left" Margin="160,148,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFFCFBFB"/>
             <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="270,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" BorderBrush="#FFFBFBFC" Background="{x:Null}" TextChanged="txtName_TextChanged"/>
+            <Image x:Name="imgName" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,1,205,168"/>
             <TextBox x:Name="txtCardNo" HorizontalAlignment="Left" Height="23" Margin="270,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" BorderBrush="#FFFBFBFC" Background="{x:Null}" TextChanged="txtCardNo_TextChanged"/>
+            <Image x:Name="imgCardNo" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,71,205,98"/>
             <TextBox x:Name="txtExpDate" HorizontalAlignment="Left" Height="23" Margin="270,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" BorderBrush="#FFFBFBFC" Background="{x:Null}" TextChanged="txtExpDate_TextChanged"/>
+            <Image x:Name="imgExpDate" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,111,205,58"/>
             <TextBox x:Name="txtCSV" HorizontalAlignment="Left" Height="23" Margin="270,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" BorderBrush="#FFFBFBFC" Background="{x:Null}" TextChanged="txtCSV_TextChanged"/>
+            <Image x:Name="imgCSV" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,149,205,20"/>
             <ComboBox x:Name="cboType" HorizontalAlignment="Left" Margin="270,39,0,0" VerticalAlignment="Top" Width="264" BorderBrush="#FFF7F2F2" Background="{x:Null}" SelectionChanged="cboType_SelectionChanged">
                 <ComboBoxItem Content="Visa Credit - Fee £0:00" HorizontalAlignment="Left" Width="264"/>
                 <ComboBoxItem Content="Visa Debit - Fee £0:00" HorizontalAlignment="Left" Width="264"/>
@@ -31,6 +35,7 @@
                 <ComboBoxItem Content="MasterCard Debit - Fee £0:00" HorizontalAlignment="Left" Width="264"/>
                 <ComboBoxItem Content="Maestro - Fee £0:00" HorizontalAlignment="Left" Width="264"/>
             </ComboBox>
+            <Image x:Name="imgType" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,31,205,138"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="61" Margin="10,343,0,0" VerticalAlignment="Top" Width="774">
             <Button x:Name="btnConfirm" HorizontalAlignment="Left" Margin="314,1,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="btnConfirm_Click">

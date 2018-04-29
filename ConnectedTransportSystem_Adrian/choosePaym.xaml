@@ -16,23 +16,27 @@
         </Grid>
         <Grid HorizontalAlignment="Left" Height="199" Margin="10,114,0,0" VerticalAlignment="Top" Width="774">
             <TextBlock HorizontalAlignment="Left" Margin="290,0,0,0" TextWrapping="Wrap" Text="How would you like to pay?" VerticalAlignment="Top" Foreground="#FFFDFBFB" FontSize="16"/>
-            <Button x:Name="btnCash" HorizontalAlignment="Left" Margin="129,78,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnCash_Click">
+            <Image x:Name="imgCash" Source="images\cashI.jpg" Margin="66,38,508,10" MouseDown="imgCash_MouseDown" MouseEnter="imgCash_MouseEnter" MouseLeave="imgCash_MouseLeave"/>
+            <Image x:Name="imgCard" Source="images\cardI.jpg" Margin="285,38,289,10" MouseDown="imgCard_MouseDown" MouseEnter="imgCard_MouseEnter" MouseLeave="imgCard_MouseLeave"/>
+            <Image x:Name="imgPayPal" Source="images\paypalI.jpg" Margin="509,38,65,10" Stretch="Fill" MouseDown="imgPayPal_MouseDown" MouseEnter="imgPayPal_MouseEnter" MouseLeave="imgPayPal_MouseLeave"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="61" Margin="10,343,0,0" VerticalAlignment="Top" Width="774">
+            <Button x:Name="btnCash" HorizontalAlignment="Left" Margin="93,0,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnCash_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\cash.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnCard" HorizontalAlignment="Left" Margin="314,78,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="btnCard_Click">
+            <Button x:Name="btnCard" HorizontalAlignment="Left" Margin="314,0,0,0" VerticalAlignment="Top" Width="150" Height="50" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="btnCard_Click" RenderTransformOrigin="0.424,0.433">
                 <Button.Background>
                     <ImageBrush ImageSource="images\card.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnPayPal" HorizontalAlignment="Left" Margin="498,78,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnPayPal_Click">
+            <Button x:Name="btnPayPal" HorizontalAlignment="Left" Margin="533,0,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnPayPal_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="images\paypal.png"/>
                 </Button.Background>
             </Button>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="61" Margin="10,343,0,0" VerticalAlignment="Top" Width="774"/>
         <Button x:Name="btnBack" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Click="btnBack_Click">
             <Button.Background>
                 <ImageBrush ImageSource="images\back.png"/>

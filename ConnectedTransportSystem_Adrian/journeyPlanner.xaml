@@ -26,6 +26,7 @@
                 <ComboBoxItem Content="Colraine - 232" HorizontalAlignment="Left" Width="120"/>
                 <ComboBoxItem Content="Newry - 202" HorizontalAlignment="Left" Width="120"/>
             </ComboBox>
+            <Image x:Name="imgStartPoint" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,36,394,133"/>
             <ComboBox x:Name="cboEnd" HorizontalAlignment="Left" Margin="225,110,0,0" VerticalAlignment="Top" Width="120" FontSize="16" SelectionChanged="cboEnd_SelectionChanged">
                 <ComboBoxItem Content="Derry - 212" HorizontalAlignment="Left" Width="120"/>
                 <ComboBoxItem Content="Omagh - 274" HorizontalAlignment="Left" Width="120"/>
@@ -33,9 +34,12 @@
                 <ComboBoxItem Content="Colraine - 232" HorizontalAlignment="Left" Width="120"/>
                 <ComboBoxItem Content="Newry - 202" HorizontalAlignment="Left" Width="120"/>
             </ComboBox>
+            <Image x:Name="imgEndPoint" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,106,394,63"/>
             <Label Content="Or" HorizontalAlignment="Left" Margin="589,67,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#FFFAF6F6"/>
             <TextBox x:Name="txtStart" HorizontalAlignment="Left" Height="23" Margin="549,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Background="{x:Null}" BorderBrush="#FFFAFAFC" TextChanged="txtStart_TextChanged"/>
+            <Image x:Name="imgStartTime" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,36,70,133"/>
             <TextBox x:Name="txtEnd" HorizontalAlignment="Left" Height="23" Margin="549,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Background="{x:Null}" BorderBrush="#FFFAFAFC" TextChanged="txtEnd_TextChanged"/>
+            <Image x:Name="imgEndTime" Source="images/warning-icon.png" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,102,70,67"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="61" Margin="10,343,0,0" VerticalAlignment="Top" Width="774">
             <Button x:Name="btnSearch" HorizontalAlignment="Left" Margin="323,10,0,0" VerticalAlignment="Top" Width="150" Height="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnSearch_Click">

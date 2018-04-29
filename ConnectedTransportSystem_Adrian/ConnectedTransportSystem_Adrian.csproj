@@ -192,5 +192,20 @@
   <ItemGroup>
     <Resource Include="images\change-password.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Transport.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\updatesI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cardI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cashI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\paypalI.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,12 +38,12 @@ namespace ConnectedTransportSystem_Adrian
         {
             if(SignUpUser(txtUsername.Text, txtPassword.Text, txtEmail.Text))
             {
-                MessageBox.Show("Welcome, " + txtUsername.Text);
+                MessageBox.Show("Welcome, " + txtUsername.Text, "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Information);
                 ReturnToLogin();
             }
             else
             {
-                MessageBox.Show("Failed to Sign-Up, Username already exists!");
+                MessageBox.Show("Failed to Sign-Up, Username already exists!", "Connect Transport", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -82,19 +82,19 @@ namespace ConnectedTransportSystem_Adrian
         void EnableSignUp()
         {
             if (txtEmail.Text.Length > 0)
-                txtEmail.Background = null;
+                imgEmail.Visibility = Visibility.Hidden;
             else
-                txtEmail.Background = Brushes.Red;
+                imgEmail.Visibility = Visibility.Visible;
 
             if (txtUsername.Text.Length > 0)
-                txtUsername.Background = null;
+                imgUsername.Visibility = Visibility.Hidden;
             else
-                txtUsername.Background = Brushes.Red;
+                imgUsername.Visibility = Visibility.Visible;
 
             if (txtPassword.Text.Length > 0)
-                txtPassword.Background = null;
+                imgPassword.Visibility = Visibility.Hidden;
             else
-                txtPassword.Background = Brushes.Red;
+                imgPassword.Visibility = Visibility.Visible;
 
             if (txtUsername.Text.Length > 0 && txtPassword.Text.Length > 0 && txtEmail.Text.Length > 0)
             {
