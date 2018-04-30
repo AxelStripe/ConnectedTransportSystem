@@ -26,6 +26,7 @@ namespace ConnectedTransportSystem_Adrian
         {
             InitializeComponent();
             _data = data;
+            mnuUser.Header = _data.GetLoggedInUser().GetUsername();
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

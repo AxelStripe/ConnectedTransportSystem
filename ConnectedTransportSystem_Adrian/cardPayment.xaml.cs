@@ -26,6 +26,7 @@ namespace ConnectedTransportSystem_Adrian
             InitializeComponent();
             _data = data;
             EnableConfirm();
+            mnuUser.Header = _data.GetLoggedInUser().GetUsername();
         }
 
         private void logOut_Click(object sender, RoutedEventArgs e)

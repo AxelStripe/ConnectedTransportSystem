@@ -29,7 +29,7 @@
             </MenuItem>
         </Menu>
         <Grid HorizontalAlignment="Left" Height="61" Margin="75,10,0,0" VerticalAlignment="Top" Width="649">
-            <Label x:Name="pageTitle" Content="transaction complete" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Top" Width="629" Height="51" Foreground="#FFFDF9F9" FontSize="36" FontFamily="Perpetua Titling MT"/>
+            <Label x:Name="pageTitle" Content="transaction complete" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Top" Width="499" Height="51" Foreground="#FFFDF9F9" FontSize="36" FontFamily="Perpetua Titling MT"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="344" Margin="10,76,0,-1" VerticalAlignment="Top" Width="774">
             <Label Content="Transaction Ref No:" HorizontalAlignment="Left" Margin="182,12,0,0" VerticalAlignment="Top" Foreground="#FFFCF8F8" FontSize="16"/>
